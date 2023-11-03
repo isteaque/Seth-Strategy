@@ -846,6 +846,17 @@ RESPONSIVE STYLE
 .container, .container-lg, .container-md, .container-sm {
   max-width: 480px;
 }
+.carousel-caption-h1 {
+  font-size: 40px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+}
+.about {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 }
 
 
