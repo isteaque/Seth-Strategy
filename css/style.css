@@ -815,6 +815,38 @@ RESPONSIVE STYLE
   font-size: 20px;
 }
 }
+@media screen and (max-width: 575px){
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .social-icon-link {
+    width: 25px;
+    height: 25px;
+    line-height: 26px;
+    font-size: 14px;
+}
+.navbar-brand {
+  font-size: 25px;
+  
+}
+#sticky-wrapper.style{
+  height: 52px;
+}
+.navbar {
+  padding-top: 0.1rem;
+  padding-bottom: .1rem;
+}
+.navbar-toggler .navbar-toggler-icon {
+  width: 20px; 
+}
+.navbar-toggler .navbar-toggler-icon:before, .navbar-toggler .navbar-toggler-icon:after {
+  width: 20px;
+}
+.container, .container-lg, .container-md, .container-sm {
+  max-width: 480px;
+}
+}
 
 
 @media screen and (max-width: 1280px) {
