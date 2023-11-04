@@ -589,12 +589,10 @@ SERVICES
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 .nav-tabs .nav-link h3{
-  font-size: 36px;
-  font-weight: bold;
+  
   text-align: left;
   color: #000;
-  line-height: inherit;
-  letter-spacing: -1px;
+  
 }
 .nav-tabs .nav-link span{
   text-align: left;
