@@ -857,6 +857,18 @@ RESPONSIVE STYLE
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.about-thumb {
+  padding: 25px;
+}
+.about-thumb-left {
+  padding: 25px;
+}
+.about-thumb-right {
+  padding: 25px;
+}
+.about-thumb-left a {
+  font-size: 14px;
+}
 }
 
 
