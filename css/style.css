@@ -791,10 +791,13 @@ FOOTER
 .site-footer-wrap{}
 .social-icon{}
 .social-icon li{}
-.site-footer .copyright-text {
+.copyright-text {
   color: white;
   font-size: 16px;
-  margin-right: 25px;
+  /* margin-right: 25px; */
+}
+.copyright-text.bottom{
+  text-align: right;
 }
 
 /* 
@@ -804,8 +807,13 @@ RESPONSIVE STYLE
 --------------------------------------------- 
 */
 @media screen and (max-width: 1280px) {
-  .site-footer .copyright-text {
-    margin-right: 5px;
+.copyright-text {
+    
+}
+@media screen and (max-width: 1200px) {
+.projects-thumb-large {
+    min-height: 298px;
+}
 }
 .social-icon-link {
   margin: 1px;
@@ -836,7 +844,7 @@ h1 {
     font-size: 18px;
   }
 .header .social-icon {
-  margin-top: 10px;
+  margin-top: 0px;
     text-align: right;
 }
 .carousel-caption{
@@ -855,15 +863,40 @@ h1 {
   
   margin-right: 0;
 }
+.content-about{
+ margin-bottom: 20px;
+}
+.about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.about-thumb-left {
+    padding: 40px 40px 50px 40px;
+}
 .about-thumb-left h5 {
   font-size: 18px;
 }
 .about-thumb-right h5 {
   font-size: 20px;
 }
+.services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.projects {
+    padding-top: 80px;
+}
+.copyright-text{
+ text-align: center;
+}
+.copyright-text.bottom{
+  text-align: center;
+}
 }
 @media screen and (max-width: 767px){
-
+  .copyright-text{
+ text-align: center;
+}
 }
 @media screen and (max-width: 575px){
    h1 {
@@ -895,6 +928,9 @@ h1 {
     height: 25px;
     line-height: 26px;
     font-size: 14px;
+}
+.header .social-icon {
+    margin-top: 0px;
 }
 .navbar-brand {
   font-size: 25px;
@@ -954,11 +990,14 @@ h1 {
 .site-footer-wrap {
     flex-direction: column;
 }
-.site-footer .copyright-text {
+.copyright-text {
     font-size: 14px;
 }
+.copyright-text{
+ text-align: center;
+}
 .copyright-text.bottom{
-  margin-left: 45px;
+  text-align: center;
 }
 .site-footer {
     padding-top: 15px;
