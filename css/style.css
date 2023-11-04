@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -24,15 +24,15 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+/* ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
-}
+}                                 //// I comment this because this exectly has in bottom section
 
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
-}
+} */
 
 /*
  * A better looking default horizontal rule
@@ -92,82 +92,131 @@ font & reset css
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 /* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
+
+
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #f9c10b;
+  --secondary-color:              #dc3545;
+  --section-bg-color:             #f5f5f5;
+  --dark-color:                   #000000;
+  --p-color:                      #717275;
+
+  --body-font-family:             'DM Sans', sans-serif;
+
+  --h1-font-size:                 60px;
+  --h2-font-size:                 42px;
+  --h3-font-size:                 36px;
+  --h4-font-size:                 32px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  18px;
+  --menu-font-size:               14px;
+  --copyright-text-font-size:     16px;
+
+  --font-weight-normal:           400;
+  --font-weight-medium:           500;
+  --font-weight-bold:             700;
 }
 
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+body {
+    background: var(--white-color);
+    font-family: var(--body-font-family); 
 }
 
-.clearfix {
-  display: inline-block;
+
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
 }
 
-html[xmlns] .clearfix {
-  display: block;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -1px;
 }
 
-* html .clearfix {
-  height: 1%;
+h1 {
+  font-size: var(--h1-font-size);
+  letter-spacing: -2px;
 }
 
-ul, li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+h2 {
+  font-size: var(--h2-font-size);
+  letter-spacing: -2px;
 }
 
-header, nav, section, article, aside, footer, hgroup {
-  display: block;
+h3 {
+  font-size: var(--h3-font-size);
+  line-height: inherit;
 }
 
-* {
-  box-sizing: border-box;
-}
-html, body {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  background-color: #fff;
-  font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h4 {
+  font-size: var(--h4-font-size);
+  line-height: inherit;
 }
 
-a {
-  text-decoration: none !important;
+h5 {
+  font-size: var(--h5-font-size);
+  line-height: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-ul {
-  margin-bottom: 0px;
+h6 {
+  font-size: var(--h6-font-size);
 }
 
 p {
-  font-size: 18px;
-  line-height: 25px;
-  color: #2a2a2a;
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
 }
+
+ul li {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+a, 
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  color: var(--p-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+
 
 /* 
 ---------------------------------------------
@@ -181,6 +230,7 @@ header
 }
 .header .social-icon{
   text-align: right;
+  margin: 0;
 }
 .social-icon li{
   list-style: none;
@@ -485,9 +535,7 @@ ABOUT
   border-radius: 20px;
   padding: 40px;
 }
-.about-thumb-left h5 {
-  font-size: 24px;
-}
+
 .about-thumb-left a {
     background-color: #F7BF0B;
     padding: 12px 24px 12px 24px;
@@ -521,11 +569,6 @@ SERVICES
   background-color: #F5F5F5;
 }
 .services-heading{}
-.services-heading h2{
-  color: #000;
-  font-size: 42px;
-  font-weight: 700;
-}
 
 .nav-tabs {
   border-bottom: 0px;
@@ -593,11 +636,6 @@ PROJECTS
   padding-top: 120px;
   /* padding-bottom: 120px; */
 }
-.projects-heading {
-  font-size: 42px;
-  font-weight: 700;
-  letter-spacing: 0px;
-}
 .projects-thumb{
   border-radius: 20px;
   position: relative;
@@ -632,7 +670,7 @@ PROJECTS
   transition: all 0.3s;
 }
 .projects-thumb-large{
-  min-height: 365px;
+  min-height: 360px;
 }
 .projects-thumb-large .projects-image{
   height: 100%;
@@ -657,8 +695,6 @@ PROJECTS
   color: #F7BF0B;
 }
 .projects-title{
-  font-size: 42px;
-  font-weight: 700;
   color: white;
   margin-bottom: 10px;
   
@@ -686,10 +722,6 @@ CONTACT
 .contact-form{
   margin-top: 30px;
   margin-right: 30px;
-}
-.contact-form-h2{
-  font-size: 42px;
-  font-weight: 700;
 }
 
 .custom-form .form-control {
@@ -728,17 +760,7 @@ CONTACT
   padding: 40px;
   border-radius: 20px;
 }
-.contact-info-h4-one {
-  font-size: 32px;
-  font-weight: 700;
-  /* letter-spacing: 0px; */
-  line-height: inherit;
-}
-.contact-info-h4-two {
-  font-size: 32px;
-  font-weight: 700;
 
-}
 .contact-info-h4-two a{
   color: #717275;
 }
@@ -746,10 +768,7 @@ CONTACT
   font-size: 32px;
   color: #F7BF0B;
 }
-.contact-info-h5 {
-  font-size: 24px;
-  font-weight: 700;
-}
+
 .contact-info-h5 a{
   color: #717275;
 }
@@ -786,11 +805,41 @@ RESPONSIVE STYLE
 
 --------------------------------------------- 
 */
+@media screen and (max-width: 1280px) {
+  .site-footer .copyright-text {
+    margin-right: 5px;
+}
+.social-icon-link {
+  margin: 1px;
+}
+}
 @media screen and (max-width: 991px){
+h1 {
+    font-size: 48px;
+  }
 
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
 .header .social-icon {
   margin-top: 10px;
-    text-align: left;
+    text-align: right;
 }
 .carousel-caption{
     width: 100%;
@@ -815,7 +864,30 @@ RESPONSIVE STYLE
   font-size: 20px;
 }
 }
+@media screen and (max-width: 767px){
+
+}
 @media screen and (max-width: 575px){
+   h1 {
+    font-size: 38px;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
   p {
     font-size: 14px;
     line-height: 20px;
@@ -843,22 +915,21 @@ RESPONSIVE STYLE
 .navbar-toggler .navbar-toggler-icon:before, .navbar-toggler .navbar-toggler-icon:after {
   width: 20px;
 }
-.container, .container-lg, .container-md, .container-sm {
-  max-width: 480px;
-}
-.carousel-caption-h1 {
-  font-size: 40px;
-}
 .carousel-control-prev-icon, .carousel-control-next-icon {
   height: 50px;
   width: 50px;
+}
+.content-about{
+  margin-bottom: 10pxb;
 }
 .about {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 .about-thumb {
-  padding: 25px;
+    padding: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 .about-thumb-left {
   padding: 25px;
@@ -869,21 +940,36 @@ RESPONSIVE STYLE
 .about-thumb-left a {
   font-size: 14px;
 }
+.services {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.nav-tabs .nav-link {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    
+}
+.projects {
+    padding-top: 40px;
+}
+.site-footer-wrap {
+    flex-direction: column;
+}
+.site-footer .copyright-text {
+    font-size: 14px;
+}
+.copyright-text.bottom{
+  margin-left: 45px;
+}
+.site-footer {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
 }
 
 
-@media screen and (max-width: 1280px) {
-  .site-footer .copyright-text {
-    margin-right: 5px;
-}
-.social-icon-link {
-  margin: 1px;
-}
-.projects-heading {
-  font-size: 36px;
 
-}
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
