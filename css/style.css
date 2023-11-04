@@ -553,9 +553,7 @@ ABOUT
   border-radius: 20px;
   padding: 40px;
 }
-.about-thumb-right h5{
-  font-size: 24px;
-}
+
 
 /* 
 ---------------------------------------------
@@ -807,16 +805,45 @@ RESPONSIVE STYLE
 --------------------------------------------- 
 */
 @media screen and (max-width: 1280px) {
-.copyright-text {
-    
+  .about-thumb-left a {
+    /* margin-top: -5px; */
 }
 @media screen and (max-width: 1200px) {
-.projects-thumb-large {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+  .projects-thumb-large {
     min-height: 298px;
 }
-}
+
 .social-icon-link {
   margin: 1px;
+}
+.about-thumb-left {
+  padding: 40px 40px 50px 40px;
+}
+.about-thumb-left a {
+  margin-top: 23px;
 }
 }
 @media screen and (max-width: 991px){
